@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body
+    class="font-['Poppins'] py-20 lg:py-30 px-5 lg:px-20 xl:px-40 min-h-screen bg-[url('./images/bg-intro-mobile.png')] lg:bg-[url('./images/bg-intro-desktop.png')] bg-[#ff7a7a]"
+  >
+    <main
+      class="grid grid-cols-1 lg:grid-cols-2 grid-rows-[1fr_90px_1.5fr] lg:grid-rows-[90px_1fr] gap-4"
+    >
+      <div
+        class="grid place-items-center lg:grid-rows-[1fr_1.5fr] lg:gap-8 col-start-1 col-end-2 row-start-1 lg:row-start-2 row-end-2 lgrow-end-3"
+      >
+        <h1
+          class="text-2xl lg:self-end lg:text-4xl xl:text-5xl text-center lg:text-start w-full text-white font-bold"
+        >
+          Learn to code by <br />
+          watching others
+        </h1>
+        <p
+          class="font-normal lg:self-start text-slate-200 text-center lg:text-start leading-7"
+        >
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div
+        class="animate__animated animate__bounceInDown animate__slow mb-4 col-start-1 lg:col-start-2 col-end-2 lg:col-end-3 row-start-2 lg:row-start-1 row-end-3 lg:row-end-2 bg-[#6055a5] rounded-lg grid place-items-center shadow-[0px_5px_5px_0px_rgba(0,0,0,0.3)]"
+      >
+        <p class="w-full text-[#cecaec] text-center">
+          <strong class="text-white">Try it free 7 days</strong> then
+          <br class="lg:hidden" />$20/mo. thereafter
+        </p>
+      </div>
+      <form
+        name="form"
+        id="form"
+        class="form bg-white col-start-1 lg:col-start-2 col-end-2 lg:col-end-3 row-start-3 lg:row-start-2 row-end-4 lg:row-end-3 rounded-lg p-7 shadow-[0px_5px_5px_0px_rgba(0,0,0,0.3)]"
+      >
+        <div class="input-container relative mb-4">
+          <input
+            type="text"
+            name="name"
+            id="first-name"
+            placeholder="First Name"
+            class="animate__animated animate__fadeInRight animate__slow w-full border-solid border-1 text-[#ff0000] border-[#ccc9ea] rounded-md p-4 placeholder-[#736f86] font-semibold text-sm"
+          />
+          <img
+            src="./images/icon-error.svg"
+            alt="error-icon"
+            class="hidden first-name-error-icon absolute top-4 right-7"
+          />
+          <small
+            ><p class="first-name-error text-end text-[#ff0000] italic mt-2"></p
+          ></small>
+        </div>
+        <div class="input-container relative mb-4">
+          <input
+            type="text"
+            name="name"
+            id="last-name"
+            placeholder="Last Name"
+            class="animate__animated animate__fadeInLeft animate__slow w-full border-solid border-1 text-[#ff0000] border-[#ccc9ea] rounded-md p-4 placeholder-[#736f86] font-semibold text-sm"
+          />
+          <img
+            src="./images/icon-error.svg"
+            alt="error-icon"
+            class="hidden last-name-error-icon absolute top-4 right-7"
+          />
+          <small
+            ><p class="last-name-error text-end text-[#ff0000] italic mt-2"></p
+          ></small>
+        </div>
+        <div class="input-container relative mb-4">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+            class="animate__animated animate__fadeInRight animate__slow w-full border-solid border-1 text-[#ff0000] border-[#ccc9ea] rounded-md p-4 placeholder-[#736f86] font-semibold text-sm"
+          />
+          <img
+            src="./images/icon-error.svg"
+            alt="error-icon"
+            class="hidden email-error-icon absolute top-4 right-7"
+          />
+          <small
+            ><p class="email-error text-end text-[#ff0000] italic mt-2"></p
+          ></small>
+        </div>
+        <div class="input-container relative mb-4">
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            class="animate__animated animate__fadeInLeft animate__slow password w-full border-solid border-1 text-[#ff0000] border-[#ccc9ea] rounded-md p-4 placeholder-[#736f86] font-semibold text-sm"
+          />
+          <img
+            src="./images/icon-error.svg"
+            alt="error-icon"
+            class="hidden password-error-icon absolute top-4 right-7"
+          />
+          <small
+            ><p class="password-error text-end text-[#ff0000] italic mt-2"></p
+          ></small>
+        </div>
+
+        <button
+          type="submit"
+          class="animate__animated animate__bounceInUp animate__slow block w-full pt-4 pb-3 mb-2 px-5 border-b-4 border-b-[#2da772] rounded-md bg-[#38cc8c] hover:bg-[#7ae6b7] text-white uppercase"
+        >
+          Claim your free trial
+        </button>
+        <small
+          ><p class="text-center text-[#b9b6d3]">
+            By clicking the button, you are agreeing to our
+            <span class="text-[#ff4c4c] font-semibold">Terms and Services</span>
+          </p></small
+        >
+      </form>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
